@@ -50,7 +50,7 @@ sqlmap -u url.com --crawl depth --batch
 sqlmap -u url.com --crawl 5 --technique="U" --batch
 ```
 
-### Thread >> using multiple connection for faster result, default 1, [range= 1 to 10]
+### Thread >> using multiple connections for faster results, default 1, [range= 1 to 10]
 ```
 sqlmap -u url.com --crawl 5 --threads [1 to 10] --batch
 ```
@@ -61,7 +61,7 @@ sqlmap -u url.com --crawl 5 --threads [1 to 10] --batch
 sqlmap -u url.com --crawl 5 --risk 3
 ```
 
-### Level -- test in the cookies; default 1, [range=1 to 5]
+### Level >> test in the cookies; default 1, [range=1 to 5]
 
 ```
 sqlmap -u url.com --crawl 5 --level 5
