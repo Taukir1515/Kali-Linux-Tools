@@ -6,39 +6,40 @@ Aquatone is a tool for visual inspection of websites across a large amount of ho
 https://github.com/michenriksen/aquatone
 ```
 
-### ▶ Requirement: Google Chrome or Chromium Browser (Chromium is recommended)  
+### ▶ Requirement: 
+Google Chrome or Chromium Browser (Chromium is recommended)  
 
 ## Installation
 Aquatone — is a tool for visual inspection of websites
 Instructions to Install Aquatone on Kali Linux.
 
 
-## ▶ Download the latest release of Aquatone : 
+#### ▶ Download the latest release of Aquatone : 
 ```
 https://github.com/michenriksen/aquatone/releases/
 ```
 
-▶ Run : 
+#### ▶ Run : 
 ```
 unzip aquatone_linux_amd64_1.7.0.zip
 ```
 
-▶ Run : 
+#### ▶ Run : 
 ```
 cd aquatone_linux_amd64_1.7.0
 ```
 
-▶ Run : 
+#### ▶ Run : 
 ```
 mv aquatone /usr/bin/  
 ```
 
-▶ Run (Check) : 
+#### ▶ Run (Check) : 
 ```
 aquatone -version
 ```  
 
-▶ Run (Check/Usage) : 
+#### ▶ Run (Check/Usage) : 
 ```
 cat list.txt | aquatone 
 ```
@@ -46,7 +47,7 @@ cat list.txt | aquatone
 
 ▶ View : Open file manage (/root), point to the html report of aquatone and open it with any browser.
 
-## <mark style="background: #FF5582A6;">Usage</mark>
+## Usage
 
 ```
 cat targets.txt | aquatone
@@ -59,19 +60,19 @@ If you don't want Aquatone to create files in the current working directory, you
 cat hosts.txt | aquatone -out ~/aquatone/example.com
 ```
 
-It is also possible to set a permanent default output destination by defining an environment variable:
+#### It is also possible to set a permanent default output destination by defining an environment variable:
 ```
 export AQUATONE_OUT_PATH="~/aquatone"
 ```
 
-### Specifying ports to scan
+#### Specifying ports to scan
 
-Be default, Aquatone will scan target hosts with a small list of commonly used HTTP ports: 80, 443, 8000, 8080 and 8443. You can change this to your own list of ports with the `-ports` flag:
+By default, Aquatone will scan target hosts with a small list of commonly used HTTP ports: 80, 443, 8000, 8080 and 8443. You can change this to your own list of ports with the `-ports` flag:
 ```
 cat hosts.txt | aquatone -ports 80,443,3000,3001
 ```
 
-## Aquatone also supports aliases of built-in port lists to make it easier for you:
+#### Aquatone also supports aliases of built-in port lists to make it easier for you:
 
 - **small**: 80, 443
 - **medium**: 80, 443, 8000, 8080, 8443 (same as default)
