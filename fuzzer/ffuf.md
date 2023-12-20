@@ -1,9 +1,13 @@
-<mark style="background: #FF5582A6;">Scope</mark> : Fast web fuzzer
+## Scope
+Fast web fuzzer
 
-<mark style="background: #FF5582A6;">Source</mark>:   https://github.com/ffuf/ffuf
+## Source
+```
+https://github.com/ffuf/ffuf
+```
 Environment:  Go
 
-<mark style="background: #FF5582A6;">Installation</mark>:  
+## Installation
 ```
 go install github.com/ffuf/ffuf/v2@latest
 ```
@@ -12,56 +16,56 @@ go install github.com/ffuf/ffuf/v2@latest
 cp /root/go/bin/ffuf /usr/local/go/bin/
 ```
 
-## <mark style="background: #FF5582A6;">Example usages</mark>
+## Example Usages
 
-By using the FUZZ keyword at the end of URL (`-u`):
+#### By using the FUZZ keyword at the end of URL (`-u`):
 ```
 ffuf -w /path/to/wordlist -u https://target/FUZZ
 ```
 
-Assuming that the default virtualhost response size is 4242 bytes, we can filter out all the responses of that size (`-fs 4242`)while fuzzing the Host - header:
+#### Assuming that the default virtualhost response size is 4242 bytes, we can filter out all the responses of that size (`-fs 4242`)while fuzzing the Host - header:
 ```
 ffuf -w /path/to/vhost/wordlist -u https://target -H "Host: FUZZ" -fs 4242
 ```
 
 ### GET parameter fuzzing
 
-GET parameter name fuzzing is very similar to directory discovery, and works by defining the `FUZZ` keyword as a part of the URL. This also assumes a response size of 4242 bytes for invalid GET parameter name.
+#### GET parameter name fuzzing is very similar to directory discovery, and works by defining the `FUZZ` keyword as a part of the URL. This also assumes a response size of 4242 bytes for invalid GET parameter name.
 ```
 ffuf -w /path/to/paramnames.txt -u https://target/script.php?FUZZ=test_value -fs 4242
 ```
 
-If the parameter name is known, the values can be fuzzed the same way. This example assumes a wrong parameter value returning HTTP response code 401.
+#### If the parameter name is known, the values can be fuzzed the same way. This example assumes a wrong parameter value returning HTTP response code 401.
 ```
 ffuf -w /path/to/values.txt -u https://target/script.php?valid_name=FUZZ -fc 401
 ```
 
 ### POST data fuzzing
 
-This is a very straightforward operation, again by using the `FUZZ` keyword. This example is fuzzing only part of the POST request. We're again filtering out the 401 responses.
+#### This is a very straightforward operation, again by using the `FUZZ` keyword. This example is fuzzing only part of the POST request. We're again filtering out the 401 responses.
 ```
 ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" -u https://target/login.php -fc 401
 ```
 
 ### Maximum execution time
 
-If you don't want ffuf to run indefinitely, you can use the `-maxtime`. This stops **the entire** process after a given time (in seconds).
+#### If you don't want ffuf to run indefinitely, you can use the `-maxtime`. This stops **the entire** process after a given time (in seconds).
 ```
 ffuf -w /path/to/wordlist -u https://target/FUZZ -maxtime 60
 ```
 
-When working with recursion, you can control the maxtime **per job** using `-maxtime-job`. This will stop the current job after a given time (in seconds) and continue with the next one. New jobs are created when the recursion functionality detects a subdirectory.
+#### When working with recursion, you can control the maxtime **per job** using `-maxtime-job`. This will stop the current job after a given time (in seconds) and continue with the next one. New jobs are created when the recursion functionality detects a subdirectory.
 ```
 ffuf -w /path/to/wordlist -u https://target/FUZZ -maxtime-job 60 -recursion -recursion-depth 2
 ```
 
-It is also possible to combine both flags limiting the per job maximum execution time as well as the overall execution time. If you do not use recursion then both flags behave equally.
+#### It is also possible to combine both flags limiting the per job maximum execution time as well as the overall execution time. If you do not use recursion then both flags behave equally.
 
-### Using external mutator to produce test cases
+### Using external mutator to produce test cases:
 
-For this example, we'll fuzz JSON data that's sent over POST. [Radamsa](https://gitlab.com/akihe/radamsa) is used as the mutator.
+#### For this example, we'll fuzz JSON data that's sent over POST. [Radamsa](https://gitlab.com/akihe/radamsa) is used as the mutator.
 
-When `--input-cmd` is used, ffuf will display matches as their position. This same position value will be available for the callee as an environment variable `$FFUF_NUM`. We'll use this position value as the seed for the mutator. Files example1.txt and example2.txt contain valid JSON payloads. We are matching all the responses, but filtering out response code `400 - Bad request`:
+#### When `--input-cmd` is used, ffuf will display matches as their position. This same position value will be available for the callee as an environment variable `$FFUF_NUM`. We'll use this position value as the seed for the mutator. Files example1.txt and example2.txt contain valid JSON payloads. We are matching all the responses, but filtering out response code `400 - Bad request`:
 
 ```
 ffuf --input-cmd 'radamsa --seed $FFUF_NUM example1.txt example2.txt' -H "Content-Type: application/json" -X POST -u https://ffuf.io.fi/FUZZ -mc all -fc 400
