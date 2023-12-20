@@ -1,10 +1,14 @@
-### <mark style="background: #FF5582A6;">Scope</mark>  [recommended for Ubuntu]
- Bug Bounty Hunting Tools is a script to install the most popular tools used while looking for vulnerabilities for a bug bounty program.
+## Scope</mark>  [RECOMMENDED FOR UBUNTU]
+Bug Bounty Hunting Tools is a script to install the most popular tools used while looking for vulnerabilities for a bug bounty program.
 
-### <mark style="background: #FF5582A6;">Source</mark>:   https://github.com/nahamsec/bbht
-Environment:  Go
+## Source
 
-### <mark style="background: #FF5582A6;">Tools</mark>
+```
+https://github.com/nahamsec/bbht
+```
+#### Environment:  Go
+
+## Included Tools
 - dirsearch
 - JSParser
 - knockpy
@@ -23,7 +27,7 @@ Environment:  Go
 - Httprobe
 - Seclists collection
 
-### <mark style="background: #FF5582A6;">Installation</mark> 
+## Installation
 
 ```
 git clone https://github.com/nahamsec/bbht.git
@@ -41,4 +45,3 @@ chmod +x install.sh
 ./install.sh
 ```
 
-## <mark style="background: #FF5582A6;">Example usages</mark>
