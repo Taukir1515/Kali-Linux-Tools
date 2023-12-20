@@ -1,9 +1,13 @@
-<mark style="background: #FF5582A6;">Scope</mark> : Fast passive subdomain enumeration tool.
+## Scope
+Fast passive subdomain enumeration tool.
 
-<mark style="background: #FF5582A6;">Source</mark>:   https://github.com/projectdiscovery/subfinder
-Environment:  go
+## Source
+```
+https://github.com/projectdiscovery/subfinder
+```
+#### Environment:  go
 
-<mark style="background: #FF5582A6;">Installation</mark>
+## Installation
 ```
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
@@ -17,7 +21,7 @@ cp subfinder /usr/local/go/bin/
 ```
 
 
-<mark style="background: #FF5582A6;">Example Usage: </mark>
+## Example Usage
 
 ```
 subfinder -h
