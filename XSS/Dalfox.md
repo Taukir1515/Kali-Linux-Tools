@@ -1,14 +1,17 @@
-<mark style="background: #FF5582A6;">Scope</mark> 
+## Scope
 Dalfox is a powerful open-source XSS scanner and utility focused on automation.
 
-<mark style="background: #FF5582A6;">Source</mark>: https://github.com/hahwul/dalfox
+## Source
+https://github.com/hahwul/dalfox
+
 Environment: Go
 
-<mark style="background: #FF5582A6;">Installation</mark>
+
+## Installation
 ```
 go install github.com/hahwul/dalfox/v2@latest
 ```
-OR
+### OR
 ```
 git clone https://github.com/hahwul/dalfox.git
 ```
@@ -17,7 +20,7 @@ git clone https://github.com/hahwul/dalfox.git
 cp /root/go/bin/dalfox /usr/local/go/bin/
 ```
 
-<mark style="background: #FF5582A6;">Example Usage</mark>
+## Example Usage
 
 ```
 dalfox [mode] [target] [flags] 
@@ -159,7 +162,6 @@ dalfox url {TARGET-URL}
 ```
 
 e.g
-
 ```
 dalfox url http://testphp.vulnweb.com/listproducts.php\?cat\=123\&artist\=123\&asdf\=ff
 ```
