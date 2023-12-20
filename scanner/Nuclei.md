@@ -7,7 +7,7 @@ We have a [dedicated repository](https://github.com/projectdiscovery/nuclei-temp
 ```
 https://github.com/projectdiscovery/nuclei
 ```
-Environment:  Go
+#### Environment:  Go
 
 ## Installation
 ```
