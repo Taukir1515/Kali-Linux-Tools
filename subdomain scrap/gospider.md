@@ -1,5 +1,6 @@
-<mark style="background: #FF5582A6;">Scope</mark>: Fast web spider written in Go
-***Features
+## Scope
+Fast web spider written in Go
+## Features
 - Fast web crawling
 - Brute force and parse sitemap.xml
 - Parse robots.txt
@@ -13,10 +14,13 @@
 - Crawl multiple sites in parallel
 - Random mobile/web User-Agent
 
-<mark style="background: #FF5582A6;">Source</mark>:  https://github.com/jaeles-project/gospider
-Environment: Go
+## Source
+```
+https://github.com/jaeles-project/gospider
+```
+#### Environment: Go
 
-<mark style="background: #FF5582A6;">Installation</mark>: 
+## Installation
 ```
 GO111MODULE=on go install github.com/jaeles-project/gospider@latest
 ```
@@ -30,7 +34,7 @@ cp gospider /usr/local/go/bin/
 ```
 
 
-<mark style="background: #FF5582A6;">Example Usage:</mark> 
+## Example Usage
 
 ```
 Fast web spider written in Go - v1.1.5 by @thebl4ckturtle & @j3ssiejjj
@@ -81,38 +85,38 @@ Flags:
 ```
 
 
-Quite output
+#### Quite output
 ```
 gospider -q -s "https://google.com/"
 ```
 
-Run with single site
+#### Run with single site
 ```
 gospider -s "https://google.com/" -o output -c 10 -d 1
 ```
 
-Run with site list
+#### Run with site list
 ```
 gospider -S sites.txt -o output -c 10 -d 1
 ```
 
-Run with 20 sites at the same time with 10 bot each site
+#### Run with 20 sites at the same time with 10 bot each site
 ```
 gospider -S sites.txt -o output -c 10 -d 1 -t 20
 ```
 
 
-Also get URLs from 3rd party (Archive.org, CommonCrawl.org, VirusTotal.com, AlienVault.com)
+#### Also get URLs from 3rd party (Archive.org, CommonCrawl.org, VirusTotal.com, AlienVault.com)
 ```
 gospider -s "https://google.com/" -o output -c 10 -d 1 --other-source
 ```
 
-Also get URLs from 3rd party (Archive.org, CommonCrawl.org, VirusTotal.com, AlienVault.com) and include subdomains
+#### Also get URLs from 3rd party (Archive.org, CommonCrawl.org, VirusTotal.com, AlienVault.com) and include subdomains
 ```
 gospider -s "https://google.com/" -o output -c 10 -d 1 --other-source --include-subs
 ```
 
-Use custom header/cookies
+#### Use custom header/cookies
 
 ```
 gospider -s "https://google.com/" -o output -c 10 -d 1 --other-source -H "Accept: */*" -H "Test: test" --cookie "testA=a; testB=b"
@@ -122,14 +126,14 @@ gospider -s "https://google.com/" -o output -c 10 -d 1 --other-source --burp bur
 
 
 
-Blacklist url/file extension.
+#### Blacklist url/file extension.
 
 **P/s**: gospider blacklisted `.(jpg|jpeg|gif|css|tif|tiff|png|ttf|woff|woff2|ico)` as default
 ```
 gospider -s "https://google.com/" -o output -c 10 -d 1 --blacklist ".(woff|pdf)"
 ```
 
-Show and Blacklist file length.
+#### Show and Blacklist file length.
 
 ```
 gospider -s "https://google.com/" -o output -c 10 -d 1 --length --filter-length "6871,24432"   
