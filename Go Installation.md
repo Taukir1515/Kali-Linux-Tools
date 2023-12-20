@@ -35,7 +35,7 @@ Now we need to refresh the .zshrc to get the updated variables
 source .zshrc
 ```
 
-Now we just need to verify that everything is correctly configured and we can do that by creating a simple ‘hello world’ program in Go.  
+Now we just need to verify that everything is correctly configured.
 
 Just type
 ```
