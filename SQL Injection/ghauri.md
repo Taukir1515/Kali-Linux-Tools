@@ -1,12 +1,12 @@
-### Scope
+## Scope
 An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws
 
-### Source
+## Source
 https://github.com/sqlmapproject/sqlmap
 
 Environment:  Python
 
-### Installation
+## Installation
 ```
 git clone https://github.com/r0oth3x49/ghauri.git
 ```
