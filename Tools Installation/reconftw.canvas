@@ -1,6 +1,0 @@
-{
-	"nodes":[
-		{"id":"9af0b7169e24b225","x":-343,"y":-298,"width":683,"height":338,"type":"text","text":"### Installation\n*Changing go path\n-  mousepad .zshrc\n\n*add the following at the end\n-  export PATH=$PATH:/usr/local/go/bin\n- save and exit the mousepad\n\n- source .zshrc\n- \n\n"}
-	],
-	"edges":[]
-}
