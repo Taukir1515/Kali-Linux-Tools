@@ -1,6 +1,0 @@
-{
-	"nodes":[
-		{"id":"64e7b1eb052ca935","type":"text","text":"python oralyzer.py -h\n\npython oralyzer.py -u https://www.canopycare.us/\n\npython oralyzer.py -l /root/Desktop/adminpanel1.txt\n","x":-223,"y":-190,"width":523,"height":290}
-	],
-	"edges":[]
-}
