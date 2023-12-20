@@ -1,13 +1,20 @@
-<mark style="background: #FF5582A6;">Scope</mark> : Crawling and spidering framework
+## Scope
+Crawling and spidering framework
 
-<mark style="background: #FF5582A6;">Source</mark>:   https://github.com/projectdiscovery/katana
+## Source
+```
+https://github.com/projectdiscovery/katana
+```
+
 Environment:  Go
 
-<mark style="background: #FF5582A6;">Installation</mark>:  
+## Installation
+
 ```
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 ```
- OR
+#### OR
+
 ```
 git clone https://github.com/projectdiscovery/katana.git
 ```
@@ -15,7 +22,7 @@ git clone https://github.com/projectdiscovery/katana.git
 ```
 cp /root/go/bin/katana /usr/local/go/bin/
 ```
-## <mark style="background: #FF5582A6;">Usage</mark>
+## Usage
 
 #### Help 
 ```
@@ -35,9 +42,6 @@ katana -u https://tesla.com,https://google.com
 #### List Input
 ```
 cat url_list.txt
-
-https://tesla.com
-https://google.com
 ```
 
 ```
@@ -53,7 +57,7 @@ echo https://tesla.com | katana
 cat domains | httpx | katana
 ```
 
-### Proxy to Burp Suite
+#### Proxy to Burp Suite
 
 ```
 katana -u abc.com -proxy http://127.0.0.1:8080
