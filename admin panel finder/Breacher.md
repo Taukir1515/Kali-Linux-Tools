@@ -13,7 +13,7 @@ Environment: Python
 ```
 git clone https://github.com/s0md3v/Breacher.git
 ```
-### Store ### /root/Breacher
+
 
 ## Example Usages
 
