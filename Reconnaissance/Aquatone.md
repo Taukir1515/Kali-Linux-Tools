@@ -1,16 +1,19 @@
-<mark style="background: #FF5582A6;">Scope</mark>: Aquatone is a tool for visual inspection of websites across a large amount of hosts and is convenient for quickly gaining an overview of HTTP-based attack surface.
+## Scope
+Aquatone is a tool for visual inspection of websites across a large amount of hosts and is convenient for quickly gaining an overview of HTTP-based attack surface.
 
-<mark style="background: #FF5582A6;">Source</mark>:  https://github.com/michenriksen/aquatone
-Environment:
+## Source
+```
+https://github.com/michenriksen/aquatone
+```
 
+### ▶ Requirement: Google Chrome or Chromium Browser (Chromium is recommended)  
 
-<mark style="background: #FF5582A6;">Installation</mark>
+## Installation
 Aquatone — is a tool for visual inspection of websites
 Instructions to Install Aquatone on Kali Linux.
 
-▶ Requirement : Google Chrome or Chromium Browser (Chromium is recommended)  
 
-▶ Download the latest release of Aquatone : 
+## ▶ Download the latest release of Aquatone : 
 ```
 https://github.com/michenriksen/aquatone/releases/
 ```
