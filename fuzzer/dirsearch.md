@@ -1,9 +1,15 @@
-<mark style="background: #FF5582A6;">Scope</mark> : Web path scanner
+## Scope
+Web path scanner
 
-<mark style="background: #FF5582A6;">Source</mark>:   https://github.com/maurosoria/dirsearch
+## Source
+
+```
+https://github.com/maurosoria/dirsearch
+```
 Environment:  Python
 
-<mark style="background: #FF5582A6;">Installation</mark>:  
+## Installation
+
 ```
 git clone https://github.com/maurosoria/dirsearch.git
 ```
@@ -15,12 +21,12 @@ cd dirsearch
 ```
 pip3 install -r requirements.txt
 ```
-OR
+#### OR
 ```
 sudo apt-get install dirsearch
 ```
 
-## <mark style="background: #FF5582A6;">Example usages</mark>
+## Example Usages
 
 ```
 dirsearch.py [-u|--url] target [-e|--extensions] extensions [options]
