@@ -59,13 +59,13 @@ ffuf -w /path/to/wordlist -u https://target/FUZZ -maxtime 60
 ffuf -w /path/to/wordlist -u https://target/FUZZ -maxtime-job 60 -recursion -recursion-depth 2
 ```
 
-#### It is also possible to combine both flags limiting the per job maximum execution time as well as the overall execution time. If you do not use recursion then both flags behave equally.
+It is also possible to combine both flags limiting the per job maximum execution time as well as the overall execution time. If you do not use recursion then both flags behave equally.
 
-### Using external mutator to produce test cases:
+Using external mutator to produce test cases:
 
-#### For this example, we'll fuzz JSON data that's sent over POST. [Radamsa](https://gitlab.com/akihe/radamsa) is used as the mutator.
+For this example, we'll fuzz JSON data that's sent over POST. [Radamsa](https://gitlab.com/akihe/radamsa) is used as the mutator.
 
-#### When `--input-cmd` is used, ffuf will display matches as their position. This same position value will be available for the callee as an environment variable `$FFUF_NUM`. We'll use this position value as the seed for the mutator. Files example1.txt and example2.txt contain valid JSON payloads. We are matching all the responses, but filtering out response code `400 - Bad request`:
+When `--input-cmd` is used, ffuf will display matches as their position. This same position value will be available for the callee as an environment variable `$FFUF_NUM`. We'll use this position value as the seed for the mutator. Files example1.txt and example2.txt contain valid JSON payloads. We are matching all the responses, but filtering out response code `400 - Bad request`:
 
 ```
 ffuf --input-cmd 'radamsa --seed $FFUF_NUM example1.txt example2.txt' -H "Content-Type: application/json" -X POST -u https://ffuf.io.fi/FUZZ -mc all -fc 400
@@ -86,13 +86,13 @@ ffuf --input-cmd 'cat $FFUF_NUM.txt' -H "Content-Type: application/json" -X POST
 
 ### Configuration files
 
-#### When running ffuf, it first checks if a default configuration file exists. Default path for a `ffufrc` file is `$XDG_CONFIG_HOME/ffuf/ffufrc`. You can configure one or multiple options in this file, and they will be applied on every subsequent ffuf job. An example of ffufrc file can be found [here](https://github.com/ffuf/ffuf/blob/master/ffufrc.example).
+When running ffuf, it first checks if a default configuration file exists. Default path for a `ffufrc` file is `$XDG_CONFIG_HOME/ffuf/ffufrc`. You can configure one or multiple options in this file, and they will be applied on every subsequent ffuf job. An example of ffufrc file can be found [here](https://github.com/ffuf/ffuf/blob/master/ffufrc.example).
 
-#### A more detailed description about configuration file locations can be found in the wiki: [https://github.com/ffuf/ffuf/wiki/Configuration](https://github.com/ffuf/ffuf/wiki/Configuration)
+A more detailed description about configuration file locations can be found in the wiki: [https://github.com/ffuf/ffuf/wiki/Configuration](https://github.com/ffuf/ffuf/wiki/Configuration)
 
-#### The configuration options provided on the command line override the ones loaded from the default `ffufrc` file. Note: this does not apply for CLI flags that can be provided more than once. One of such examples is `-H` (header) flag. In this case, the `-H` values provided on the command line will be _appended_ to the ones from the config file instead.
+The configuration options provided on the command line override the ones loaded from the default `ffufrc` file. Note: this does not apply for CLI flags that can be provided more than once. One of such examples is `-H` (header) flag. In this case, the `-H` values provided on the command line will be _appended_ to the ones from the config file instead.
 
-#### Additionally, in case you wish to use bunch of configuration files for different use cases, you can do this by defining the configuration file path using `-config` command line flag that takes the file path to the configuration file as its parameter.
+Additionally, in case you wish to use bunch of configuration files for different use cases, you can do this by defining the configuration file path using `-config` command line flag that takes the file path to the configuration file as its parameter.
 
 ## Usage
 
