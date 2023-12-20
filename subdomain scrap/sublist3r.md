@@ -1,14 +1,18 @@
-<mark style="background: #FF5582A6;">Scope</mark>: Fast subdomains enumeration tool for penetration testers
+## Scope
+Fast subdomains enumeration tool for penetration testers
 
-<mark style="background: #FF5582A6;">Source</mark>: https://github.com/aboul3la/Sublist3r
-Environment: Python
+## Source
+```
+https://github.com/aboul3la/Sublist3r
+```
+#### Environment: Python
 
-<mark style="background: #FF5582A6;">Installation: </mark>
+## Installation
 ```
 git clone https://github.com/aboul3la/Sublist3r.git
 ```
 
-### <mark style="background: #FF5582A6;">Example Usage</mark>
+## Example Usage
 
 |Short Form|Long Form|Description|
 |---|---|---|
