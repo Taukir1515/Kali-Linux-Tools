@@ -71,7 +71,7 @@ ffuf -w /path/to/wordlist -u https://target/FUZZ -maxtime-job 60 -recursion -rec
 ffuf --input-cmd 'radamsa --seed $FFUF_NUM example1.txt example2.txt' -H "Content-Type: application/json" -X POST -u https://ffuf.io.fi/FUZZ -mc all -fc 400
 ```
 
-It of course isn't very efficient to call the mutator for each payload, so we can also pre-generate the payloads, still using [Radamsa](https://gitlab.com/akihe/radamsa) as an example:
+#### It of course isn't very efficient to call the mutator for each payload, so we can also pre-generate the payloads, still using [Radamsa](https://gitlab.com/akihe/radamsa) as an example:
 
 ```
 # Generate 1000 example payloads
@@ -86,17 +86,17 @@ ffuf --input-cmd 'cat $FFUF_NUM.txt' -H "Content-Type: application/json" -X POST
 
 ### Configuration files
 
-When running ffuf, it first checks if a default configuration file exists. Default path for a `ffufrc` file is `$XDG_CONFIG_HOME/ffuf/ffufrc`. You can configure one or multiple options in this file, and they will be applied on every subsequent ffuf job. An example of ffufrc file can be found [here](https://github.com/ffuf/ffuf/blob/master/ffufrc.example).
+#### When running ffuf, it first checks if a default configuration file exists. Default path for a `ffufrc` file is `$XDG_CONFIG_HOME/ffuf/ffufrc`. You can configure one or multiple options in this file, and they will be applied on every subsequent ffuf job. An example of ffufrc file can be found [here](https://github.com/ffuf/ffuf/blob/master/ffufrc.example).
 
-A more detailed description about configuration file locations can be found in the wiki: [https://github.com/ffuf/ffuf/wiki/Configuration](https://github.com/ffuf/ffuf/wiki/Configuration)
+#### A more detailed description about configuration file locations can be found in the wiki: [https://github.com/ffuf/ffuf/wiki/Configuration](https://github.com/ffuf/ffuf/wiki/Configuration)
 
-The configuration options provided on the command line override the ones loaded from the default `ffufrc` file. Note: this does not apply for CLI flags that can be provided more than once. One of such examples is `-H` (header) flag. In this case, the `-H` values provided on the command line will be _appended_ to the ones from the config file instead.
+#### The configuration options provided on the command line override the ones loaded from the default `ffufrc` file. Note: this does not apply for CLI flags that can be provided more than once. One of such examples is `-H` (header) flag. In this case, the `-H` values provided on the command line will be _appended_ to the ones from the config file instead.
 
-Additionally, in case you wish to use bunch of configuration files for different use cases, you can do this by defining the configuration file path using `-config` command line flag that takes the file path to the configuration file as its parameter.
+#### Additionally, in case you wish to use bunch of configuration files for different use cases, you can do this by defining the configuration file path using `-config` command line flag that takes the file path to the configuration file as its parameter.
 
 ## Usage
 
-To define the test case for ffuf, use the keyword `FUZZ` anywhere in the URL (`-u`), headers (`-H`), or POST data (`-d`).
+#### To define the test case for ffuf, use the keyword `FUZZ` anywhere in the URL (`-u`), headers (`-H`), or POST data (`-d`).
 
 ```
 Fuzz Faster U Fool - v2.1.0
@@ -204,7 +204,7 @@ EXAMPLE USAGE:
 
 ### Interactive mode
 
-By pressing `ENTER` during ffuf execution, the process is paused and user is dropped to a shell-like interactive mode:
+#### By pressing `ENTER` during ffuf execution, the process is paused and user is dropped to a shell-like interactive mode:
 
 ```
 entering interactive mode
@@ -234,10 +234,10 @@ available commands:
 > 
 ```
 
-in this mode, filters can be reconfigured, queue managed and the current state saved to disk.
+#### In this mode, filters can be reconfigured, queue managed and the current state saved to disk.
 
-When (re)configuring the filters, they get applied posthumously and all the false positive matches from memory that would have been filtered out by the newly added filters get deleted.
+#### When (re)configuring the filters, they get applied posthumously and all the false positive matches from memory that would have been filtered out by the newly added filters get deleted.
 
-The new state of matches can be printed out with a command `show` that will print out all the matches as like they would have been found by `ffuf`.
+#### The new state of matches can be printed out with a command `show` that will print out all the matches as like they would have been found by `ffuf`.
 
-As "negative" matches are not stored to memory, relaxing the filters cannot unfortunately bring back the lost matches. For this kind of scenario, the user is able to use the command `restart`, which resets the state and starts the current job from the beginning.
+#### As "negative" matches are not stored to memory, relaxing the filters cannot unfortunately bring back the lost matches. For this kind of scenario, the user is able to use the command `restart`, which resets the state and starts the current job from the beginning.
