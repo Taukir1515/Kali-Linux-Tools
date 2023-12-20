@@ -163,37 +163,37 @@ Example:
 ```
 
 
-Single Target with parameter
+### Single Target with parameter
 ```
 ghauri -u http://testphp.vulnweb.com/artists.php?artist=1 --batch
 ```
 
-Multiple target parameters in a file
+### Multiple target parameters in a file
 ```
 ghauri -m urls.txt --batch
 ```
 
-Scan Level; default=1; range=1 to 3
+### Scan Level; default=1; range=1 to 3
 ```
 ghauri -u http://testphp.vulnweb.com/artists.php?artist=1 --batch --level 2
 ```
 
-HTTP code to match when query is evaluated to True
+### HTTP code to match when query is evaluated to True
 ```
 ghauri -u http://testphp.vulnweb.com/artists.php?artist=1 --batch --level 2 --code 200
 ```
 
-String to match when query is evaluated to True
+### String to match when query is evaluated to True
 ```
 ghauri -u http://testphp.vulnweb.com/artists.php?artist=1 --batch --level 2 --string product
 ```
 
-String to match when query is evaluated to False
+### String to match when query is evaluated to False
 ```
 ghauri -u http://testphp.vulnweb.com/artists.php?artist=1 --batch --level 2 --not-string product
 ```
 
-Use a proxy to connect to the target URL 
+### Use a proxy to connect to the target URL 
 ```
 ghauri -u http://testphp.vulnweb.com/artists.php?artist=1 --batch --proxy 127.0.0.1:8080
 ```
