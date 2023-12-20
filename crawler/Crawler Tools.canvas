@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"3eb62b2201644eac","type":"text","text":"Crawler/Spider Tools","x":-120,"y":-980,"width":231,"height":60,"color":"6"},
+		{"id":"de02ba5ff3895441","type":"text","text":"Github Source: projectdiscovery\nEnvironment: Go","x":-312,"y":-800,"width":345,"height":82},
+		{"id":"8f04286977230556","type":"text","text":"Installation:\ngit clone https://github.com/hakluke/hakrawler.git\nOr go install github.com/hakluke/hakrawler@latest","x":-312,"y":-718,"width":492,"height":120},
+		{"id":"6321393db23f40c4","type":"text","text":"Store: cd hakrawler","x":-312,"y":-598,"width":250,"height":60},
+		{"id":"b49c01de1f232d64","type":"text","text":"**Usage:**\n katana -h\n echo abc.com | katana | tee -a urls.txt\n cat url-files.txt | katana | tee -a urls.txt","x":-312,"y":-538,"width":413,"height":138},
+		{"id":"c77daf8a53edde5c","type":"text","text":"katana","x":-437,"y":-860,"width":250,"height":60,"color":"3"},
+		{"id":"3aaa857edb3cfa18","type":"text","text":"hakrawler","x":-437,"y":-360,"width":250,"height":60,"color":"3"},
+		{"id":"29b4eff9752a7792","type":"text","text":"Github Source: hakluke\nEnvironment: Go","x":-312,"y":-300,"width":345,"height":82},
+		{"id":"4b565dc31049f818","type":"text","text":"Installation:\ngit clone https://github.com/hakluke/hakrawler.git\nOr go install github.com/hakluke/hakrawler@latest","x":-308,"y":-218,"width":492,"height":120},
+		{"id":"a22f182dc7ec800f","type":"text","text":"Store: cd hakrawler","x":-308,"y":-98,"width":250,"height":60},
+		{"id":"3668b27f0142bac4","type":"text","text":"**Usage:**\n hakrawler -h\n echo abc.com | hakrawler | tee -a urls.txt\n cat url-files.txt | hakrawler | tee -a urls.txt","x":-312,"y":-38,"width":432,"height":138},
+		{"id":"5f1de1632f4c2b1d","type":"text","text":"waybackurls","x":-437,"y":140,"width":250,"height":60,"color":"3"},
+		{"id":"e7f236419a2962a5","type":"text","text":"Github Source: tomnomnom\nEnvironment: Go","x":-304,"y":200,"width":345,"height":82},
+		{"id":"acf8c4a5a0c19df2","type":"text","text":"Installation:\ngit clone https://github.com/tomnomnom/waybackurls.git\nOr go install github.com/tomnomnom/waybackurls@latest","x":-304,"y":282,"width":564,"height":120},
+		{"id":"7cbc16229ab72df1","type":"text","text":"Store: cd waybackurls","x":-304,"y":402,"width":250,"height":60},
+		{"id":"54251a1d7f7de6b7","type":"text","text":"**Usage:**\n waybackurls -h\n echo abc.com | waybackurls | tee -a urls.txt\n cat url-files.txt | waybackurls | tee -a urls.txt","x":-304,"y":462,"width":432,"height":138}
+	],
+	"edges":[
+		{"id":"fff25d8741d81f23","fromNode":"de02ba5ff3895441","fromSide":"left","toNode":"8f04286977230556","toSide":"left"},
+		{"id":"bdd3f40a16ef7280","fromNode":"8f04286977230556","fromSide":"left","toNode":"6321393db23f40c4","toSide":"left"},
+		{"id":"6adcc438af605b4b","fromNode":"6321393db23f40c4","fromSide":"left","toNode":"b49c01de1f232d64","toSide":"left"},
+		{"id":"a77687ffe3095d06","fromNode":"29b4eff9752a7792","fromSide":"left","toNode":"4b565dc31049f818","toSide":"left"},
+		{"id":"5fb6e459164520b0","fromNode":"4b565dc31049f818","fromSide":"left","toNode":"a22f182dc7ec800f","toSide":"left"},
+		{"id":"d33ef631dc0623da","fromNode":"a22f182dc7ec800f","fromSide":"left","toNode":"3668b27f0142bac4","toSide":"left"},
+		{"id":"e50ca65fbad0eb89","fromNode":"e7f236419a2962a5","fromSide":"left","toNode":"acf8c4a5a0c19df2","toSide":"left"},
+		{"id":"46ae25403df83169","fromNode":"acf8c4a5a0c19df2","fromSide":"left","toNode":"7cbc16229ab72df1","toSide":"left"},
+		{"id":"73014220d82a797c","fromNode":"7cbc16229ab72df1","fromSide":"left","toNode":"54251a1d7f7de6b7","toSide":"left"}
+	]
+}

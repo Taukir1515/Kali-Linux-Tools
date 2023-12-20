@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"e96829aa47734984","x":-220,"y":-260,"width":233,"height":60,"type":"text","text":"Subdomain Enumeration"},
+		{"id":"1f2411b38c1cfb4d","x":-460,"y":-88,"width":190,"height":80,"type":"text","text":"Linked & JS Discovery"},
+		{"id":"3f208fd708679bca","x":80,"y":-88,"width":220,"height":60,"type":"text","text":"Subdomain Brute Force"},
+		{"id":"880b6f4cc3855c69","x":-213,"y":-78,"width":220,"height":60,"type":"text","text":"Subdomain Scrapping"},
+		{"id":"e7d817ee358e2f99","x":-460,"y":40,"width":170,"height":60,"type":"text","text":"Burp Suite Pro"}
+	],
+	"edges":[
+		{"id":"ba9d0e0acfec96c5","fromNode":"e96829aa47734984","fromSide":"bottom","toNode":"1f2411b38c1cfb4d","toSide":"top"},
+		{"id":"7a7de53c88e3fe92","fromNode":"e96829aa47734984","fromSide":"bottom","toNode":"880b6f4cc3855c69","toSide":"top"},
+		{"id":"28a2fd4520120768","fromNode":"e96829aa47734984","fromSide":"bottom","toNode":"3f208fd708679bca","toSide":"top"},
+		{"id":"e45c2fb5d76d6d69","fromNode":"1f2411b38c1cfb4d","fromSide":"bottom","toNode":"e7d817ee358e2f99","toSide":"left"}
+	]
+}

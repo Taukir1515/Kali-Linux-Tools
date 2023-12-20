@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"e90f938f20285197","type":"text","text":"Dalfox","x":-293,"y":-255,"width":250,"height":60},
+		{"id":"ddb7fa01f2f98605","type":"text","text":"\ndalfox url url.com\ndalfox url --custom-payload payload-list.txt","x":-399,"y":-195,"width":579,"height":95}
+	],
+	"edges":[]
+}

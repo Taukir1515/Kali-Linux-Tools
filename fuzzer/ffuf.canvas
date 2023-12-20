@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"7d1f97148b7c753d","type":"text","text":"- Fuzz file paths from wordlist.txt, match all responses but filter out those with content-size 42.\n  Colored, verbose output.\n> ffuf -w wordlist.txt -u https://example.org/FUZZ -mc all -fs 42 -c -v\n\n- Fuzz Host-header, match HTTP 200 responses.\n> ffuf -w hosts.txt -u https://example.org/ -H \"Host: FUZZ\" -mc 200\n\n- Fuzz POST JSON data. Match all responses not containing text \"error\".\n> ffuf -w entries.txt -u https://example.org/ -X POST -H \"Content-Type: application/json\" \\\n  -d '{\"name\": \"FUZZ\", \"anotherkey\": \"anothervalue\"}' -fr \"error\"\n\n- Fuzz multiple locations. Match only responses reflecting the value of \"VAL\" keyword. Colored.\n> ffuf -w params.txt:PARAM -w values.txt:VAL -u https://example.org/?PARAM=VAL -mr \"VAL\" -c\n\n  \n","x":-415,"y":-140,"width":875,"height":420},
+		{"id":"3593f0cc517531f0","type":"text","text":"More information and examples: https://github.com/ffuf/ffuf","x":-360,"y":700,"width":565,"height":60,"color":"1"},
+		{"id":"b39cc9a04d7e39d9","type":"text","text":"> ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d \"username=FUZZ&email=x&password=x&cpassword=x\" -H \"Content-Type: application/x-www-form-urlencoded\" -u http://example.org/customers/signup -mr \"username already exists\"","x":-415,"y":340,"width":875,"height":112},
+		{"id":"66de96d28afea610","type":"text","text":"ffuf","x":-415,"y":-240,"width":250,"height":60,"color":"1"}
+	],
+	"edges":[
+		{"id":"601e1d46662e335d","fromNode":"66de96d28afea610","fromSide":"left","toNode":"7d1f97148b7c753d","toSide":"left"},
+		{"id":"58217233084fece6","fromNode":"7d1f97148b7c753d","fromSide":"left","toNode":"b39cc9a04d7e39d9","toSide":"left"}
+	]
+}
