@@ -1,39 +1,44 @@
-<mark style="background: #FF5582A6;">Scope</mark>: In-depth attack surface mapping and asset discovery (Both Active & Passive)
+## Scope
+In-depth attack surface mapping and asset discovery (Both Active & Passive)
 
-<mark style="background: #FF5582A6;">Source</mark>:  https://github.com/owasp-amass/amass
-Environment: Go
-
-<mark style="background: #FF5582A6;">Installation</mark>: Pre-built in kali 
-
-<mark style="background: #FF5582A6;">Example Usage:</mark>
-
-The amass tool and all the subcommands show options using the **'-h'** and **'-help'** flags:
+## Source
 ```
-amass -help
+https://github.com/owasp-amass/amass
+```
+#### Environment: Go
+
+## Installation
+*Pre-built in kali 
+
+## Example Usage
+
+#### Help
+```
+amass -h
 ```
 
-Check the version by performing the following:
+#### Check the version by performing the following:
 ```
 amass -version
 ```
 
-The most basic use of the tool for subdomain enumeration:
+#### The most basic use of the tool for subdomain enumeration:
 ```
 amass enum -d example.com
 ```
 
-Typical parameters for DNS enumeration:
+#### Typical parameters for DNS enumeration:
 ```
-$ amass enum -brute -min-for-recursive 2 -d example.com
+amass enum -brute -min-for-recursive 2 -d example.com
 example.com (FQDN) --> node --> www.example.com (FQDN)
 www.example.com (FQDN) --> a_record --> 123.456.789.01 (IPAddress)
 ```
 
-### <mark style="background: #D2B3FFA6;">The 'enum' Subcommand</mark>
+### The 'enum' Subcommand
 
 This subcommand will perform DNS enumeration and network mapping while populating the selected graph database. All the setting available in the configuration file are relevant to this subcommand. The following flags are available for configuration:
 
-#### Mode description
+### Mode description
 
 - **Normal**: Run enum subcommand without specifying active or passive flag will seed the enumeration from data sources and leverage DNS to validate findings and further investigate the namespaces in scope (provided domain names)
 ```
