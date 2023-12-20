@@ -42,7 +42,7 @@ python breacher -u example.com --path /data
 ```
 
 
-### Note
+## Note
 When you specify an extension using `--type` option, Breacher includes paths of that extension as well as paths with no extensions like `/admin/login`
 
 
