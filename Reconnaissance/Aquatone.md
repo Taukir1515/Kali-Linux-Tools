@@ -53,26 +53,26 @@ cat list.txt | aquatone
 cat targets.txt | aquatone
 ```
 
-#### Changing the output destination
+### Changing the output destination
 
 If you don't want Aquatone to create files in the current working directory, you can specify a different location with the `-out` flag:
 ```
 cat hosts.txt | aquatone -out ~/aquatone/example.com
 ```
 
-#### It is also possible to set a permanent default output destination by defining an environment variable:
+### It is also possible to set a permanent default output destination by defining an environment variable:
 ```
 export AQUATONE_OUT_PATH="~/aquatone"
 ```
 
-#### Specifying ports to scan
+### Specifying ports to scan
 
 By default, Aquatone will scan target hosts with a small list of commonly used HTTP ports: 80, 443, 8000, 8080 and 8443. You can change this to your own list of ports with the `-ports` flag:
 ```
 cat hosts.txt | aquatone -ports 80,443,3000,3001
 ```
 
-#### Aquatone also supports aliases of built-in port lists to make it easier for you:
+### Aquatone also supports aliases of built-in port lists to make it easier for you:
 
 - **small**: 80, 443
 - **medium**: 80, 443, 8000, 8080, 8443 (same as default)
@@ -85,7 +85,7 @@ cat hosts.txt | aquatone -ports large
 ```
 
 
-#### Amass DNS enumeration
+### Amass DNS enumeration
 ```
 amass -active -brute -o hosts.txt -d yahoo.com
 ```
@@ -101,7 +101,7 @@ amass -active -brute -o hosts.txt -d yahoo.com
 cat hosts.txt | aquatone
 ```
 
-#### Nmap or Masscan
+### Nmap or Masscan
 
 Aquatone can make a report on hosts scanned with the [Nmap](https://nmap.org/) or [Masscan](https://github.com/robertdavidgraham/masscan) portscanner. Simply feed Aquatone the XML output and give it the `-nmap` flag to tell it to parse the input as Nmap/Masscan XML:
 ```
