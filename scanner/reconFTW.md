@@ -1,11 +1,17 @@
-<mark style="background: #FF5582A6;">Scope</mark>: reconFTW is a tool designed to perform automated recon on a target domain by running the best set of tools to perform scanning and finding out vulnerabilities.
+## Scope
+reconFTW is a tool designed to perform automated recon on a target domain by running the best set of tools to perform scanning and finding out vulnerabilities.
 
-<mark style="background: #FF5582A6;">Source</mark>: https://github.com/six2dez/reconftw#osint
-Environment: Go
+## Source
 
-# <mark style="background: #FF5582A6;">Features 🔥</mark>
+```
+https://github.com/six2dez/reconftw#osint
+```
+#### Environment: Go
+
+## Features 🔥
+
 ### Osint
-- Domain information ([whois](https://github.com/rfc1036/whois) and [amass](https://github.com/OWASP/Amass))
+- Domain Information ([whois](https://github.com/rfc1036/whois) and [amass](https://github.com/OWASP/Amass))
 - Emails addresses and users ([emailfinder](https://github.com/Josue87/EmailFinder))
 - Metadata finder ([MetaFinder](https://github.com/Josue87/MetaFinder))
 - Google Dorks ([dorks_hunter](https://github.com/six2dez/dorks_hunter))
@@ -70,10 +76,10 @@ Environment: Go
 - Custom resolvers generated list ([dnsvalidator](https://github.com/vortexau/dnsvalidator))
 - Docker container included and [DockerHub](https://hub.docker.com/r/six2dez/reconftw) integration
 - Ansible + Terraform deployment over AWS
-- Allows IP/CIDR as target
-- Resume the scan from last performed step
+- Allows IP/CIDR as a target
+- Resume the scan from the last performed step
 - Custom output folder option
-- All in one installer/updater script compatible with most distros
+- All-in-one installer/updater script compatible with most distros
 - Diff support for continuous running (cron mode)
 - Support for targets with multiple domains
 - Raspberry Pi/ARM support
@@ -82,9 +88,9 @@ Environment: Go
 - Notification system with Slack, Discord and Telegram ([notify](https://github.com/projectdiscovery/notify)) and sending zipped results support
 
 
-### <mark style="background: #FF5582A6;">Installation</mark>
+## Installation Process
 
-#### Changing Go PATH
+### Changing Go PATH
 ```
 cd /root
 ```
@@ -93,11 +99,8 @@ cd /root
 mousepad .zshrc
 ```
 
-- Add the following at the end
+Add the following at the end of the file and save
 ```
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 ```
 
@@ -105,7 +108,7 @@ export PATH=$PATH:/usr/local/go/bin
 source .zshrc
 ```
 
->Install:sudosuc
+### Install
 
 ```
 git clone https://github.com/six2dez/reconftw.git
@@ -119,18 +122,9 @@ cd reconftw/
 ./install.sh
 ```
 
-```
-./reconftw.sh -d target.com -r
-```
 
-In case of error
-```
-export GIT_TRACE_PACKET=1
-export GIT_TRACE=1
-export GIT_CURL_VERBOSE=1
-```
 
-## <mark style="background: #FF5582A6;">Usage</mark>
+## Usage
 
 ### TARGET OPTIONS
 |Flag|Description|
@@ -164,9 +158,14 @@ export GIT_CURL_VERBOSE=1
 
 ## Example Usage
 
-**NOTE: this is applicable when you've installed reconFTW on the host (e.g. VM/VPS/cloud) and not in a Docker container.**
+*NOTE: This is applicable when you've installed reconFTW on the host (e.g. VM/VPS/cloud) and not in a Docker container.*
 
-### To perform a full recon on single target
+### Show help section
+```
+./reconftw.sh -h
+```
+
+### To perform a full recon on a single target
 ```
 ./reconftw.sh -d target.com -r
 ```
@@ -181,7 +180,7 @@ export GIT_CURL_VERBOSE=1
 ./reconftw.sh -d target.com -r --deep -o /output/directory/
 ```
 
-### Perform recon in a multi domain target
+### Perform recon in a multi-domain target
 ```
 ./reconftw.sh -m company -l domains_list.txt -r
 ```
@@ -196,9 +195,6 @@ export GIT_CURL_VERBOSE=1
 ./reconftw.sh -d target.com -a
 ```
 
-### Show help section
-```
-./reconftw.sh -h
-```
+
 
 
