@@ -1,17 +1,22 @@
-***Get All URLs
+## Get All URLs (GAU)
 
-<mark style="background: #FF5582A6;">Scope</mark> : Fetch known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawl..
+## Scope
+Fetch known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawling.
 
-<mark style="background: #FF5582A6;">Source</mark>:   https://github.com/lc/gau
+## Source
+```
+https://github.com/lc/gau
+```
+
 Environment:  Go
 
-<mark style="background: #FF5582A6;">Installation</mark>:  
+## Installation 
 
 ```
 go install github.com/lc/gau/v2/cmd/gau@latest
 ```
 
-OR
+### OR
 
 ```
 git clone https://github.com/lc/gau.git
@@ -30,28 +35,28 @@ gau --version
 ```
 
 
-## <mark style="background: #FF5582A6;">Example usages</mark>
-
+## Example Usages
+#### Help
 ```
 gau -h
 ```
-
+#### Single Domain
 ```
 printf domain.com | gau
 ```
-
+#### Multiple domains in a file
 ```
 cat domains.txt | gau --threads 5
 ```
-
+#### Multiple domains
 ```
 gau yahoo.com google.com
 ```
-
+#### Saving outputs
 ```
 gau domain.com --o domain-urls.txt
 ```
-
+#### Blacklisting specific extensions
 ```
 gau domain.com --blacklist png,jpg,gif 
 ```
