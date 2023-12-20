@@ -154,7 +154,7 @@ Payload Flags:
 
 ```
 
-# URL Mode
+### URL Mode
 `url` mode is the mode for detecting XSS for a single URL.
 
 ```
@@ -166,7 +166,7 @@ e.g
 dalfox url http://testphp.vulnweb.com/listproducts.php\?cat\=123\&artist\=123\&asdf\=ff
 ```
 
-# Pipeline Mode
+### Pipeline Mode
 
 `pipe` mode is the mode for scanning multiple URLs. I receive input as system I/O, so you can connect with other tools through pipeline.
 
@@ -180,7 +180,7 @@ e.g
 echo urls.txt | dalfox pipe
 ```
 
-# File Mode
+### File Mode
 `file` mode is a mode for scanning multiple URLs or for scanning based on a raw request file in Burp Suite/ZAP. Input is filename.
 
 ```
@@ -189,18 +189,18 @@ dalfox file {filename}
 
 If the file is a list of URLs, proceed to scan multiple URLs just like the Pipe, and if it is with the `--rawdata` option, recognize it as a raw request, analyze the file, and test it.
 
-## scanning URLs from file
+### scanning URLs from file
 ```
 dalfox file urls.txt
 ```
 
-## scanning from burp/zap raw request file
+### scanning from burp/zap raw request file
 ```
 dalfox file req.raw --rawdata
 ```
 
 
-# Stored XSS Mode
+### Stored XSS Mode
 `sxss` mode is a mode for easy identification of Stored XSS. The default behavior is the same as url mode, but you can specify a separate URL to validate, and you can generate a dynamic verification URL with the –sequence option in case the verification URL changes.
 
 ```
@@ -212,7 +212,7 @@ e.g.
 dalfox sxss https://test.url.local/update_profile -d "nickname=abc" --trigger "https://test.url.local/my_profile"
 ```
 
-send POST request to Store the XSS payload and verify it working of the payload with an GET request
+### Send POST request to Store the XSS payload and verify it working of the payload with an GET request
 ```
 dalfox sxss -X POST https://test.url.local/update_profile -d "nickname=abc" --trigger "https://test.url.local/my_profile" --reqeust-method GET
 ```
@@ -226,18 +226,18 @@ dalfox sxss -X POST https://test.url.local/update_profile -d "nickname=abc" --tr
 dalfox [mode] [target] [flags] 
 ```
 
-Single target mode
+### Single target mode
 ```
 dalfox url http://testphp.vulnweb.com/listproducts.php\?cat\=123\&artist\=123\&asdf\=ff \
 	-b https://your-callback-url
 ```
 
-Multiple target mode from file
+### Multiple target mode from file
 ```
 dalfox file urls_file --custom-payload ./mypayloads.txt
 ```
 
-Pipeline mode
+### Pipeline mode
 ```
 cat urls_file | dalfox pipe -H "AuthToken: bbadsfkasdfadsf87"
 ```
