@@ -1,16 +1,19 @@
-<mark style="background: #FF5582A6;">Scope</mark> 
+## Scope
 Open Source Intelligence gathering tool aimed at reducing the time spent harvesting information from open sources.
 
-<mark style="background: #FF5582A6;">Source</mark>: https://github.com/lanmaster53/recon-ng
-Environment: python
+## Source
+```
+https://github.com/lanmaster53/recon-ng
+```
+#### Environment: python
 
 
-<mark style="background: #FF5582A6;">Installation</mark>
+## Installation
 ```
 git clone https://github.com/lanmaster53/recon-ng.git
 ```
 
-### <mark style="background: #FF5582A6;">Usage</mark>
+## Usage
 ```
 python recon-ng -h
 ```
