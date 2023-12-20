@@ -1,9 +1,12 @@
-<mark style="background: #FF5582A6;">Scope</mark> : An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws
+### Scope
+An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws
 
-<mark style="background: #FF5582A6;">Source</mark>:   https://github.com/sqlmapproject/sqlmap
+### Source
+https://github.com/sqlmapproject/sqlmap
+
 Environment:  Python
 
- <mark style="background: #FF5582A6;">Installation</mark>
+### Installation
 ```
 git clone https://github.com/r0oth3x49/ghauri.git
 ```
@@ -20,14 +23,14 @@ Run:
 ```
 python3 setup.py install
 ```
-Or
+### Or
 ```
 python3 -m pip install -e
 ```
 
-## _**Features**_
+## Features
 
-- Supports following types of injection payloads:
+- Supports the following types of injection payloads:
     - Boolean based.
     - Error Based
     - Time Based
@@ -38,7 +41,7 @@ python3 -m pip install -e
     - Microsoft SQL Server
     - Postgres
     - Oracle
-    - Microsoft Access (only supports fingerprint for now in case of boolean based blind)
+    - Microsoft Access (only supports fingerprint for now in case of boolean-based blind)
 
 - Supports following injection types.
     - GET/POST Based injections
