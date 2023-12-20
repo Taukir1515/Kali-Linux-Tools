@@ -1,14 +1,15 @@
 ## Scope 
 Automatic SQL injection and database takeover tool.
 
-sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers. It comes with a powerful detection engine, many niche features for the ultimate penetration tester, and a broad range of switches including database fingerprinting, over data fetching from the database, accessing the underlying file system, and executing commands on the operating system via out-of-band connections.
+SQLmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over database servers. It comes with a powerful detection engine, many niche features for the ultimate penetration tester, and a broad range of switches including database fingerprinting, over-data fetching from the database, accessing the underlying file system, and executing commands on the operating system via out-of-band connections.
 
 ## Source
 https://github.com/sqlmapproject/sqlmap
+
 Environment:  Python
 
 ## Installation
-*** Pre-installed in Kali Linux
+*Pre-installed in Kali Linux
 
 ```
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
@@ -49,12 +50,12 @@ sqlmap -u url.com --crawl depth --batch
 sqlmap -u url.com --crawl 5 --technique="U" --batch
 ```
 
-### Thread ---using multiple connection for faster result, default 1, [range= 1 to 10]
+### Thread >> using multiple connection for faster result, default 1, [range= 1 to 10]
 ```
 sqlmap -u url.com --crawl 5 --threads [1 to 10] --batch
 ```
  
-### Risk -- harm level of payloads used, default 1, [range=1 to 3]
+### Risk >> harm level of payloads used, default 1, [range=1 to 3]
 
 ```
 sqlmap -u url.com --crawl 5 --risk 3
