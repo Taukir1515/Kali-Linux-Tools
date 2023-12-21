@@ -122,7 +122,9 @@ cd reconftw/
 ./install.sh
 ```
 
-
+```
+Insert option: 1
+```
 
 ## Usage
 
