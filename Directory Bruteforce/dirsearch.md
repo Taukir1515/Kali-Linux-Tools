@@ -15,7 +15,7 @@ git clone https://github.com/maurosoria/dirsearch.git
 
 ## Watch Video
 
- ``` https://asciinema.org/a/380112 ```
+ https://asciinema.org/a/380112
 
 # ▶ Example Usage
 
