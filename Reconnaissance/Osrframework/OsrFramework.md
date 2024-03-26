@@ -28,3 +28,11 @@ sudo apt install osrframework
 - phonefy
 - searchfy
 - usufy
+
+## ▶Example Usage
+```
+osrf -h  
+```
+```
+osrframework-cli -h 
+```
