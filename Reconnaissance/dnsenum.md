@@ -28,8 +28,6 @@ git clone https://github.com/fwaeytens/dnsenum.git
 ## ▶ Example Usage
 
 ```
-dnsenum 
-```
 dnsenum domain
 ```
 ```
@@ -37,7 +35,7 @@ dnsenum --enum domain
 ```
 ```
 dnsenum VERSION:1.2.6
-Usage: dnsenum [Options] <domain>
+▶ Usage: dnsenum [Options] <domain>
 [Options]:
 Note: If no -f tag supplied will default to /usr/share/dnsenum/dns.txt or
 the dns.txt file in the same directory as dnsenum
