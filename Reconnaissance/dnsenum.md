@@ -1,7 +1,7 @@
-## Scope
+## ▶ Scope
 dnsenum is a perl script that enumerates DNS information 
 
-## Feature
+## ▶ Feature
 - Get the host's addresse (A record).
 - Get the namservers (threaded).
 - Get the MX record (threaded).
@@ -13,19 +13,19 @@ dnsenum is a perl script that enumerates DNS information
 - Perform reverse lookups on netranges ( C class or/and whois netranges) (threaded).
 - Write to domain_ips.txt file ip-blocks.
 
-## Source
+## ▶ Source
 ```
 https://github.com/fwaeytens/dnsenum.git
 ```
 Environment: Perl
 
-## Installation
+## ▶ Installation
 ```
 git clone https://github.com/fwaeytens/dnsenum.git
 ```
 
 
-## Example Usage
+## ▶ Example Usage
 
 ```
 dnsenum 
