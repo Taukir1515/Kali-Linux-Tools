@@ -23,6 +23,9 @@ git clone https://github.com/maurosoria/dirsearch.git
 ``` 
 python3 dirsearch.py -u https://target
 ```
+```
+python3 dirsearch -u http://url.com/ --skip-on-status=400,403,404,500
+```
 ``` 
 python3 dirsearch.py -e php,html,js -u https://target
 ```
@@ -62,10 +65,13 @@ In spite of that, the speed still depends a lot on the response time of the serv
 ```
 python3 dirsearch.py -e php,htm,js,bak,zip,tgz,txt -u https://target -t 20
 ```
-
+## ▶Skip Status Code
+```
+python3 dirsearch -u http://url.com/ --skip-on-status=400,403,404,500
+```
 ## ▶Prefixes / Suffixes
 
- - --prefixes: Add custom prefixes to all entries
+--prefixes: Add custom prefixes to all entries
 
 ``` 
 python3 dirsearch.py -e php -u https://target --prefixes .,admin,_
@@ -84,7 +90,7 @@ admintools
 _tools
 ```
 
-- --suffixes: Add custom suffixes to all entries
+--suffixes: Add custom suffixes to all entries
 
 ``` 
 python3 dirsearch.py -e php -u https://target --suffixes ~
