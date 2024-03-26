@@ -1,5 +1,3 @@
-OsrFramework
-
 ## ▶Scope
 This package contains a set of libraries developed by i3visio to perform Open Source Intelligence tasks. They include references to a bunch of different applications related to 
 - Username checking
@@ -8,7 +6,6 @@ This package contains a set of libraries developed by i3visio to perform Open So
 - Deep web search
 - Regular expressions extraction and many others.
 
-## ▶Feature
 
 ## ▶Source
 ```
