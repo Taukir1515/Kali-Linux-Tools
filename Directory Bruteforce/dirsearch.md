@@ -1,25 +1,25 @@
-## ▶ Scope
+## Scope
 Directory BruteForce. Discover hidden or unlinked directories and files.
 
 
-## ▶ Source
+## Source
 ```
 https://github.com/maurosoria/dirsearch.git
 ```
 
-## ▶ Installation
+## Installation
 ```
 git clone https://github.com/maurosoria/dirsearch.git
 ```
-### ▶ Environment: Python
+### Environment: Python
 
-## ▶ Watch Video
+## Watch Video
 
  ``` https://asciinema.org/a/380112 ```
 
 # ▶ Example Usage
 
-## Simple usage
+## ▶Simple usage
 ``` 
 python3 dirsearch.py -u https://target
 ```
@@ -30,7 +30,7 @@ python3 dirsearch.py -e php,html,js -u https://target
 python3 dirsearch.py -e php,html,js -u https://target -w /path/to/wordlist
 ```
 
-## Recursion
+## ▶Recursion
 - Recursive brute-force is brute-forcing continuously the after of found directories. For example, if dirsearch finds ```admin/```, it will brute-force ```admin/*``` (```*``` is where it brute forces). To enable this feature, use -r (or --recursive) flag
 
 ``` 
@@ -53,7 +53,7 @@ python3 dirsearch.py -e php,html,js -u https://target -r --max-recursion-depth 3
 python3 dirsearch.py -e php,html,js -u https://target -r --exclude-subdirs image/,media/,css/
 ```
 
-## Threads
+## ▶Threads
 
 The thread number (-t | --threads) reflects the number of separated brute force processes. And so the bigger the thread number is, the faster dirsearch runs. By default, the number of threads is 25, but you can increase it if you want to speed up the progress.
 
@@ -63,7 +63,7 @@ In spite of that, the speed still depends a lot on the response time of the serv
 python3 dirsearch.py -e php,htm,js,bak,zip,tgz,txt -u https://target -t 20
 ```
 
-## Prefixes / Suffixes
+## ▶Prefixes / Suffixes
 
  - --prefixes: Add custom prefixes to all entries
 
@@ -71,11 +71,11 @@ python3 dirsearch.py -e php,htm,js,bak,zip,tgz,txt -u https://target -t 20
 python3 dirsearch.py -e php -u https://target --prefixes .,admin,_
 ```
 
-## Wordlist:
+## ▶Wordlist:
 
 ``` tools ```
 
-## Generated with prefixes:
+## ▶Generated with prefixes:
 
 ``` 
 tools
@@ -90,14 +90,14 @@ _tools
 python3 dirsearch.py -e php -u https://target --suffixes ~
 ```
 
-## Wordlist:
+## ▶Wordlist:
 ```
 index.php
 internal
 
 ```
 
-## Generated with suffixes:
+## ▶Generated with suffixes:
 
 ```
 index.php
@@ -106,13 +106,13 @@ index.php~
 internal~
 ```
 
-## Blacklist
+## ▶Blacklist
 
 Inside the ```db/``` folder, there are several "blacklist files". Paths in those files will be filtered from the scan result if they have the same status as mentioned in the filename.
 
 Example: If you add ```admin.php``` into ```db/403_blacklist.txt```, whenever you do a scan that ```admin.php``` returns 403, it will be filtered from the result.
 
-## Filters
+## ▶Filters
 
 Use -i | --include-status and -x | --exclude-status to select allowed and not allowed response status-codes
 
@@ -138,7 +138,7 @@ python3 dirsearch.py -e php,html,js -u https://target --exclude-redirects "https
 python3 dirsearch.py -e php,html,js -u https://target --exclude-response /error.html
 ```
 
-## Raw request
+## ▶Raw request
 
 dirsearch allows you to import the raw request from a file. The content would be something looked like this:
 
@@ -150,7 +150,7 @@ Accept: */*
 
 Since there is no way for dirsearch to know what the URI scheme is, you need to set it using the --scheme flag. By default, dirsearch automatically detects the scheme.
 
-## Wordlist formats
+## ▶Wordlist formats
 
 Supported wordlist formats: uppercase, lowercase, capitalization
 
@@ -174,7 +174,7 @@ Admin
 Index.html
 ```
 
-## Exclude extensions
+## ▶Exclude extensions
 
 Use -X | --exclude-extensions with an extension list will remove all paths in the wordlist that contains the given extensions
 
@@ -194,7 +194,7 @@ test.jsp
 admin.php
 ```
 
-## Scan sub-directories
+## ▶Scan sub-directories
 
 - From an URL, you can scan a list of sub-directories with --subdirs.
 
@@ -202,7 +202,7 @@ admin.php
 python3 dirsearch.py -e php,html,js -u https://target --subdirs /,admin/,folder/
 ```
 
-## Proxies
+## ▶Proxies
 
 dirsearch supports SOCKS and HTTP proxy, with two options: a proxy server or a list of proxy servers.
 
@@ -216,7 +216,7 @@ python3 dirsearch.py -e php,html,js -u https://target --proxy socks5://10.10.0.1
 python3 dirsearch.py -e php,html,js -u https://target --proxylist proxyservers.txt
 ```
 
-## Reports
+## ▶Reports
 
 Supported report formats: simple, plain, json, xml, md, csv, html, sqlite
 
@@ -228,7 +228,7 @@ python3 dirsearch.py -e php -l URLs.txt --format plain -o report.txt
 python3 dirsearch.py -e php -u https://target --format html -o target.json
 ```
 
-## More example commands
+## ▶More example commands
 
 ```
 cat urls.txt | python3 dirsearch.py --stdin
