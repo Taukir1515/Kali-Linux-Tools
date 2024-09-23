@@ -22,7 +22,7 @@ amass -h
 amass -version
 ```
 
-#### The most basic use of the tool for subdomain enumeration:
+#### The most basic use of the tool for DNS records (mx, ns, IP, cname):
 ```
 amass enum -d example.com
 ```
